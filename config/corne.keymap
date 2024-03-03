@@ -20,29 +20,6 @@
 };
 
 / {
-    macros {
-        terminal: terminal {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp K &kp I &kp ENTER>;
-            label = "TERMINAL";
-        };
-
-        browser: browser {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp C &kp H &kp ENTER>;
-            label = "BROWSER";
-        };
-
-        slack: slack {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp S &kp L &kp ENTER>;
-            label = "SLACK";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -59,10 +36,10 @@
         numbers {
             label = "Numbers";
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3    &kp N4     &kp N5    &kp N6             &kp N7      &kp N8             &kp N9           &kp N0    &trans
-&trans  &trans  &slack  &browser  &terminal  &trans    &kp LEFT           &kp DOWN    &kp UP             &kp RIGHT        &kp HOME  &kp PAGE_UP
-&trans  &trans  &trans  &trans    &trans     &trans    &kp K_APPLICATION  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp END   &kp PAGE_DOWN
-                        &trans    &trans     &trans    &trans             &trans      &kp RALT
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6             &kp N7      &kp N8             &kp N9           &kp N0    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT           &kp DOWN    &kp UP             &kp RIGHT        &kp HOME  &kp PAGE_UP
+&trans  &trans  &trans  &trans  &trans  &trans    &kp K_APPLICATION  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp END   &kp PAGE_DOWN
+                        &trans  &trans  &trans    &trans             &trans      &trans
             >;
         };
 
