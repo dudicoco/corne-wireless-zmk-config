@@ -20,16 +20,29 @@
 };
 
 / {
+    behaviors {
+        space: space {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACE";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <500>;
+            require-prior-idle-ms = <100>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base {
             label = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E             &kp R            &kp T          &kp Y            &kp U           &kp I      &kp O    &kp P     &kp BACKSLASH
-&kp CAPS   &kp A  &kp S  &kp D             &kp F            &kp G          &kp H            &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
-&kp GRAVE  &kp Z  &kp X  &kp C             &kp V            &kp B          &kp N            &kp M           &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                         &mt LEFT_GUI TAB  &mt LCTRL SPACE  &lt 2 ENTER    &lt 1 BACKSPACE  &mt RSHIFT ESC  &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E             &kp R               &kp T          &kp Y            &kp U           &kp I      &kp O    &kp P     &kp BACKSLASH
+&kp CAPS   &kp A  &kp S  &kp D             &kp F               &kp G          &kp H            &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
+&kp GRAVE  &kp Z  &kp X  &kp C             &kp V               &kp B          &kp N            &kp M           &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                         &mt LEFT_GUI TAB  &space LCTRL SPACE  &lt 2 ENTER    &lt 1 BACKSPACE  &mt RSHIFT ESC  &kp RALT
             >;
         };
 
