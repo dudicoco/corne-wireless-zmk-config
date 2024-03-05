@@ -10,13 +10,11 @@
 &lt {
     flavor = "hold-preferred";
     tapping-term-ms = <200>;
-    quick-tap-ms = <500>;
 };
 
 &mt {
     flavor = "hold-preferred";
     tapping-term-ms = <200>;
-    quick-tap-ms = <500>;
 };
 
 / {
@@ -28,7 +26,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <500>;
             require-prior-idle-ms = <150>;
         };
     };
